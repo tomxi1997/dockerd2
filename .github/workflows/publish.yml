@@ -35,7 +35,7 @@ jobs:
         patch -p1 < $GITHUB_WORKSPACE/patches/docker.patch
         #cp $GITHUB_WORKSPACE/patches/cgroup.go.patch root-packages/docker/cgroup.go.patch
         #cp $GITHUB_WORKSPACE/patches/cgroups2.disable.patch root-packages/runc/cgroups2.disable.patch
-        ./scripts/run-docker.sh ./build-package.sh -i --format pacman docker lxc
+        ./scripts/run-docker.sh ./build-package.sh -i --format lxc
         
         cd output
         #bash $GITHUB_WORKSPACE/package_docker.sh
