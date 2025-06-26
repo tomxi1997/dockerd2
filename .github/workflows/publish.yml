@@ -37,11 +37,15 @@ jobs:
         #cp $GITHUB_WORKSPACE/patches/cgroups2.disable.patch root-packages/runc/cgroups2.disable.patch
         ./scripts/run-docker.sh ./build-package.sh -i --format pacman lxc
         
-        cd output
+        #cd output
         #bash $GITHUB_WORKSPACE/package_docker.sh
-        sudo chmod +x $GITHUB_WORKSPACE/*.sh
-        bash $GITHUB_WORKSPACE/repack.sh
-        mv data.tar.xz $GITHUB_WORKSPACE/module/data.tar.xz
+        #sudo chmod +x $GITHUB_WORKSPACE/*.sh
+        #bash $GITHUB_WORKSPACE/repack.sh
+        cd $GITHUB_WORKSPACE/termux-packages/output
+        mkdir package
+        mv *.xz ./package
+        tar -czvf data.tar.xz package
+        cp data.tar.xz $GITHUB_WORKSPACE/module/data.tar.xz
     
   
     - name: Upload package 
