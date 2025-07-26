@@ -36,7 +36,7 @@ jobs:
         #cp $GITHUB_WORKSPACE/patches/cgroup.go.patch root-packages/docker/cgroup.go.patch
         #cp $GITHUB_WORKSPACE/patches/cgroups2.disable.patch root-packages/runc/cgroups2.disable.patch
         #./scripts/run-docker.sh ./build-package.sh -i --format pacman lxc tar 
-        ./scripts/run-docker.sh ./build-package.sh -i --format pacman qemu-system-x86-64-headless tar
+        ./scripts/run-docker.sh ./build-package.sh -i --format pacman qemu-system-x86-64 tar
         
         cd output
         pwd
