@@ -31,7 +31,7 @@ jobs:
         patch -p1 < $GITHUB_WORKSPACE/patches/docker.patch
         #cp $GITHUB_WORKSPACE/patches/cgroup.go.patch root-packages/docker/cgroup.go.patch
         #cp $GITHUB_WORKSPACE/patches/cgroups2.disable.patch root-packages/runc/cgroups2.disable.patch
-        ./scripts/run-docker.sh ./build-package.sh -i --format debian docker docker-compose docker-buildx
+        ./scripts/run-docker.sh ./build-package.sh -i --format debian docker bochs
         
         cd output
         mkdir data
