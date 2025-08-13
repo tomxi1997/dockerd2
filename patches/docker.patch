@@ -7,7 +7,7 @@ index 18e32d9cb3..5d4d1f0438 100644
  # Default value: `com.termux`
  ##
 -TERMUX_APP__PACKAGE_NAME="com.termux"
-+TERMUX_APP__PACKAGE_NAME="lxc"
++TERMUX_APP__PACKAGE_NAME="cmd"
  TERMUX_APP_PACKAGE="$TERMUX_APP__PACKAGE_NAME" # Deprecated alternative variable for `TERMUX_APP__PACKAGE_NAME`
  
  __termux_build_props__add_variables_validator_actions "TERMUX_APP__PACKAGE_NAME" "app_package_name"
@@ -34,7 +34,7 @@ index 18e32d9cb3..5d4d1f0438 100644
  # Default value: `home`
  ##
 -TERMUX__HOME_SUBDIR="home"
-+TERMUX__HOME_SUBDIR=".lxc"
++TERMUX__HOME_SUBDIR=".cmd"
  __termux_build_props__add_variables_validator_actions "TERMUX__HOME_SUBDIR" "safe_relative_path"
  
  ##
