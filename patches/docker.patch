@@ -53,7 +53,7 @@ index 18e32d9cb3..5d4d1f0438 100644
  # Default value: `com.termux`
  ##
 -TERMUX_APP__NAMESPACE="com.termux"
-+TERMUX_APP__NAMESPACE="lxc"
++TERMUX_APP__NAMESPACE="cmd"
  
  __termux_build_props__add_variables_validator_actions "TERMUX_APP__NAMESPACE" "app_package_name"
  
