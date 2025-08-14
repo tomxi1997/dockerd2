@@ -36,7 +36,7 @@ jobs:
         #cp $GITHUB_WORKSPACE/patches/cgroup.go.patch root-packages/docker/cgroup.go.patch
         #cp $GITHUB_WORKSPACE/patches/cgroups2.disable.patch root-packages/runc/cgroups2.disable.patch
         #./scripts/run-docker.sh ./build-package.sh -i --format pacman lxc tar 
-        ./scripts/run-docker.sh ./build-package.sh -i --format pacman aria2 samba sftpgo zsync tdl telegram-bot-api telegram-cli frp iproute2 openssh screen vim zstd tar
+        ./scripts/run-docker.sh ./build-package.sh -i --format pacman aria2 samba sftpgo zsync tdl 
         
         cd output
         pwd
@@ -54,7 +54,13 @@ jobs:
         tar -czvf data.tar.xz package
         
     
-  
+    - name: How many packages
+      run: |
+            echo "-----------------------------"
+            ls termux-packages/output
+            echo "-----------------------------"
+            
+            
     - name: Upload package 
       uses: actions/upload-artifact@v4
       with:
